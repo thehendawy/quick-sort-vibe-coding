@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickSort Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Sorting Algorithm Demo</h1>
+    <p>Enter numbers separated by commas (e.g., 5,3,8,4,2):</p>
+    <input type="text" id="arrayInput" placeholder="Enter numbers here" />
+    <div class="controls">
+      <label for="algorithmSelect">Choose algorithm:</label>
+      <select id="algorithmSelect">
+        <option value="quick">QuickSort</option>
+        <option value="parallelQuick">QuickSort (Parallel)</option>
+        <option value="merge">MergeSort</option>
+        <option value="heap">HeapSort</option>
+        <option value="builtIn">JavaScript Built-in</option>
+      </select>
+      <label class="checkbox-label">
+        <input type="checkbox" id="visualizeCheckbox" />
+        Visualize sorting
+      </label>
+    </div>
+    <div class="button-row">
+      <button onclick="sortArray()">Sort Array</button>
+      <button onclick="runPerformanceTest()">Run Performance Test</button>
+    </div>
+    <div id="result"></div>
+    <canvas id="sortCanvas" width="600" height="300"></canvas>
+
+    <script src="script.js"></script>
+    <script src="benchmark.js"></script>
+  </body>
+</html>
